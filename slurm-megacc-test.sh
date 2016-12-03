@@ -1,7 +1,7 @@
 #!/bin/bash
 #
-#SBATCH --job-name=test
-#SBATCH --output=res.txt
+#SBATCH --job-name=megacc-dna-ep-test
+#SBATCH --output=megacc-dna-ep-test-stdout.txt
 #
 #SBATCH --ntasks=1
 #SBATCH --time=10:00
