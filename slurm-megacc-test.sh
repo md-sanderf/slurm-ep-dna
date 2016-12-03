@@ -11,11 +11,11 @@ val=$(sed "${SLURM_ARRAY_TASK_ID}q;d" /home/tuf79348/ep_env/testlist2.txt)
 echo $val
 mao=/home/tuf79348/ep_env/ancestral_seqs_ML_predict_living_seqs_nucleotide.mao
 echo $mao
-aln=/home/tuf79348/ep_env/$val_58.fas
+aln=/home/tuf79348/ep_env/${val}_58.fas
 echo $aln
-tree=/home/tuf79348/ep_env/$val_58.nwk
+tree=/home/tuf79348/ep_env/${val}_58.nwk
 echo $tree
-output=/home/tuf79348/ep_env/$val_58.csv
+output=/home/tuf79348/ep_env/${val}_58.csv
 echo $output
 
 srun echo running megacc calculations for $val
