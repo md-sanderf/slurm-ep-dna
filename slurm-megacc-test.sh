@@ -2,7 +2,7 @@
 #
 #SBATCH --job-name=megacc-dna-ep-test
 #SBATCH --output=megacc-dna-ep-test-stdout.txt
-#SBATCH --array=1-1000 #the array size 
+#SBATCH --array=1 #the array size 
 #SBATCH --ntasks=1
 #SBATCH --time=10:00
 #SBATCH --mem-per-cpu=200
