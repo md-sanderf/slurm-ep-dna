@@ -22,8 +22,8 @@ echo $output
 args=$mao\ $aln\ $tree\ $output
 echo $args
 
-srun echo running megacc calculations for $val
-echo /home/tuf79348/ep_env/megacc_7161102 -a $mao -d $aln -t $tree -o $output
+echo running megacc calculations for $val
+echo $args
 #srun /home/tuf79348/ep_env/megacc_7161102 -a $mao -d $aln -t $tree -o $output
 bash /home/tuf79348/ep_env/slurm-ep-dna-git/run_ep.sh $args
-srun echo finished megacc calculations for $val
+echo finished megacc calculations for $val
