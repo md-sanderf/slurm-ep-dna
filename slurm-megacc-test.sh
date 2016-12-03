@@ -19,5 +19,6 @@ output=/home/tuf79348/ep_env/$val_58.csv
 echo $output
 
 srun echo running megacc calculations for $val
+echo /home/tuf79348/ep_env/megacc_7161102 -a $mao -d $aln -t $tree -o $output
 srun /home/tuf79348/ep_env/megacc_7161102 -a $mao -d $aln -t $tree -o $output
 srun echo finished megacc calculations for $val
