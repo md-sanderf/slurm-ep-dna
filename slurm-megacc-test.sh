@@ -7,6 +7,8 @@
 #SBATCH --time=10:00
 #SBATCH --mem-per-cpu=200
 
+module load openmpi #load openMPI
+
 val=$(sed "${SLURM_ARRAY_TASK_ID}q;d" /home/tuf79348/ep_env/testlist2.txt)
 echo $val
 mao=/home/tuf79348/ep_env/ancestral_seqs_ML_predict_living_seqs_nucleotide.mao
@@ -23,5 +25,5 @@ echo $args
 srun echo running megacc calculations for $val
 echo /home/tuf79348/ep_env/megacc_7161102 -a $mao -d $aln -t $tree -o $output
 #srun /home/tuf79348/ep_env/megacc_7161102 -a $mao -d $aln -t $tree -o $output
-bash run_ep.sh $args
+bash /home/tuf79348/ep_env/slurm-ep-dna-git/run_ep.sh $args
 srun echo finished megacc calculations for $val
