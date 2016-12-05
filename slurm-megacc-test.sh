@@ -37,3 +37,8 @@ echo $args
 #srun /home/tuf79348/ep_env/megacc_7161102 -a $mao -d $aln -t $tree -o $output
 bash /home/tuf79348/ep_env/slurm-ep-dna-git/run_ep.sh $args
 echo finished megacc calculations for $val
+rm $tempmao
+rm $tempaln
+rm $temptree
+cp $tempoutput $output
+echo finished processing $val
