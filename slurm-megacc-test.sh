@@ -12,15 +12,25 @@ module load openmpi #load openMPI
 val=$(sed "${SLURM_ARRAY_TASK_ID}q;d" /home/tuf79348/ep_env/testlist2.txt)
 echo $val
 mao=/home/tuf79348/ep_env/ancestral_seqs_ML_predict_living_seqs_nucleotide.mao
+tempmao=/scratch/ancestral_seqs_ML_predict_living_seqs_nucleotide.mao
+cp $mao $tempmao
 echo $mao
+echo $tempmao
 aln=/home/tuf79348/ep_env/${val}_58.fas
+tempaln=/scratch/${val}_58.fas
+cp $aln $tempaln
 echo $aln
+echo $tempaln
 tree=/home/tuf79348/ep_env/${val}_58.nwk
+temptree=/scratch/${val}_58.nwk
+cp $tree $temptree
 echo $tree
+echo $temptree
 output=/home/tuf79348/ep_env/${val}_58.csv
+tempoutput=/scratch/${val}_58.csv
 echo $output
-args=$mao\ $aln\ $tree\ $output
-echo $args
+echo $tempoutput
+args=$tempmao\ $tempaln\ $temptree\ $tempoutput
 
 echo running megacc calculations for $val
 echo $args
