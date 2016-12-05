@@ -5,7 +5,7 @@
 #SBATCH --array=1 #the array size 
 #SBATCH --ntasks=1
 #SBATCH --time=10:00
-#SBATCH --mem-per-cpu=200
+#SBATCH --mem-per-cpu=2000
 
 module load openmpi #load openMPI
 
